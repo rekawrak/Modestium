@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="styles/regestration.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <a href="sait.html"> 
+        <img src="static/Modestium Motors.png" class="photo" alt="Modestium Motors"> 
+    </a>
+    <p class="text">Выбери машину мечты.</p>
+    <p class="autor">Авторизация</p>
+    <form id="loginForm">
+        <input id="loginEmail" class="email" type="email" name="email" placeholder="Электронная почта" required>
+        <input id="loginPassword" class="password" type="password" name="password" placeholder="Пароль" required>
+        <button class="entry" type="submit">Войти</button>
+    </form>     
+    <p class="first">Впервые тут?</p>
+    <a class="reg" href="reg.html">Создать учётную запись</a>
+    <div class="footer">
+        <div class="information">
+            <h4>Информация</h4>
+            <a class="Main" href="sait.html">Главная</a>
+            <a href="#" class="Coll">Коллекция</a>
+            <a onclick="scrollToSection();" class="Cont">Контакты</a>
+            <a href="#" class="Prof">Профиль</a>
+        </div>
+        <script>
+            function scrollToSection() {
+                window.location.href = 'sait.html#contactForm';
+            }
+        </script>
+        <div class="Contact">
+            <h4>Контакты</h4>
+            <a class="Location">
+                <p><img src="static/Vector.png" alt="Иконка карты" width="10" height="10">
+                Университетский проспект, д. 39, о. Русский, Владивосток, Приморский край, 69009</p>
+            </a>
+            <a class="Ph">
+                <img src="static/Group.png" alt="Иконка телефона" width="10" height="10">
+                8 800 263 94 22
+            </a>
+            <a class="Conta">
+                <img src="static/Group1.png" alt="Иконка email" width="10" height="10">
+                sales@modestium.com
+            </a>
+        </div>
+        <div class="Social">
+            <h4>Мы в соцсетях</h4>
+            <a class="X" href="https://x.com/?mx=2">
+                <img src="static/Shape.png" alt="Иконка X" width="30" height="23">
+            </a>
+            <a class="Facebook" href="https://facebook.com">
+                <img src="static/facebook.png" alt="Иконка Facebook" width="15" height="25">
+            </a>
+        </div>
+    </div>
+    <script>
+        function loginUser() {
+            // Получение введенных данных
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+
+            // Данные из локального хранилища
+            const storedEmail = localStorage.getItem('userEmail');
+            const storedPassword = localStorage.getItem('userPassword');
+
+            // Проверка данных
+            if (email === storedEmail && password === storedPassword) {
+                alert('Вход выполнен успешно!');
+                // Переход на страницу профиля
+                window.location.href = 'profile.html';
+            } else {
+                alert('Неправильный email или пароль.');
+            }
+        }
+    </script>
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Останавливаем стандартную отправку формы
+
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('password', password);
+
+            // Отправляем данные через Fetch API
+            fetch('login.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json()) // Получаем JSON ответ
+            .then(data => {
+                if (data.success) {
+                    // Перенаправляем, если успешно
+                    window.location.href = data.redirect;
+                } else {
+                    // Показываем сообщение об ошибке
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                alert('Произошла ошибка. Попробуйте позже.');
+            });
+        });
+    </script>
+</body>
+</html>

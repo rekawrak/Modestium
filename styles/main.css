@@ -1,0 +1,314 @@
+body {
+  height:350vh;
+  width: 50vh;
+    overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, rgb(37,37,37,100),rgb(38, 40, 74, 50),rgb(55, 26, 26, 68.35),rgb(32,29,29,10));
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu {
+  position: absolute;
+  top: 50px;
+  left: 70%;
+  transform: translateX(-50%);
+  padding: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Горизонтальное расположение элементов меню */
+  gap: 50px;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  color: #d4d4d4;
+}
+
+/* Убедимся, что ЛИЧНЫЙ КАБИНЕТ ведёт себя как другие элементы */
+#profileLink {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+
+
+.image {
+  position: relative;
+  width: 650px; /* Пример правильной ширины */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  left: 800px;
+  margin-left: 30px;
+  top: 300px;
+}
+.photo{
+  position: relative;
+  width: 120px; /* Пример правильной ширины */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  left: 100px;
+  top:-530px;
+}
+.header {
+  position: absolute;
+  top: 215px; /* Оставляем позицию сверху */
+  left: 18%; /* Положение относительно окна браузера */
+  transform: translateX(-50%); /* Центрируем меню по горизонтали, чтобы left: 70% работал правильно */
+  padding: 20px;
+
+}
+.header h1 {
+    font-size: 48px; /* Размер шрифта для заголовка */
+    font-weight: bold; /* Жирный шрифт */
+    letter-spacing: 2px; /* Расстояние между буквами */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    color: white;
+}
+
+.header .text {
+    font-size: 24px; /* Размер шрифта для параграфа */
+    line-height: 1.5; /* Высота строки для лучшей читаемости */
+    margin-top: 20px; /* Отступ сверху от заголовка */
+    color: #BDBDBD;
+}
+.fon {
+  position: absolute;
+  border-radius: 17px;
+  top: 980px; /* Оставляем позицию сверху */
+  left: 50%; /* Положение относительно окна браузера */
+  transform: translateX(-50%); /* Центрируем меню по горизонтали, чтобы left: 70% работал правильно */
+  padding: 20px;
+
+}
+.fon .cars{
+  position: absolute;
+  border-radius: 17px;
+  top: 50px; /* Оставляем позицию сверху */
+  left: 15%; /* Положение относительно окна браузера */
+  transform: translateX(-50%); /* Центрируем меню по горизонтали, чтобы left: 70% работал правильно */
+
+}
+.fon .cars2{
+  position: absolute;
+  border-radius: 17px;
+  top: 50px; /* Оставляем позицию сверху */
+  left: 43%; /* Положение относительно окна браузера */
+  transform: translateX(-50%); /* Центрируем меню по горизонтали, чтобы left: 70% работал правильно */
+
+}
+.text-us{
+  position: absolute;
+  top: 20px; /* Оставляем позицию сверху */
+  left: 70%; /* Положение относительно окна браузера */
+  transform: translateX(-50%); /* Центрируем меню по горизонтали, чтобы left: 70% работал правильно */
+  padding: 20px;
+  color: white;
+}
+.text-us h2{
+  font-size: 35px; /* Размер шрифта для заголовка */
+  font-weight: bold; /* Жирный шрифт */
+  letter-spacing: 2px; /* Расстояние между буквами */
+  text-transform: uppercase; /* Преобразование текста в верхний регистр */
+  color: white;
+
+}
+.name{
+    width: 391px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #25252B; /* Тёмный фон */
+    color: #fff; /* Цвет текста */
+    font-size: 16px;
+    position: absolute; /* Позволяет задавать точные координаты */
+ top: 756px; /* Расстояние от верхней части страницы */
+ left: 40px; /* Расстояние от левого края страницы */
+}
+.name::placeholder {
+    color: #a9a9a9; /* Цвет текста-заполнителя (placeholder) */
+}
+.con {
+  position: absolute;
+  top: 550px; /* Оставляем позицию сверху */
+  left: 35px;
+    font-size: 75px; /* Размер шрифта для параграфа */
+    line-height: 1.5; /* Высота строки для лучшей читаемости */
+    margin-top: 20px; /* Отступ сверху от заголовка */
+    color: #BDBDBD;
+}
+.phone{
+    width: 391px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #25252B; /* Тёмный фон */
+    color: #fff; /* Цвет текста */
+    font-size: 16px;
+    position: absolute; /* Позволяет задавать точные координаты */
+ top: 812px; /* Расстояние от верхней части страницы */
+ left: 40px; /* Расстояние от левого края страницы */
+}
+.phone::placeholder {
+    color: #a9a9a9; /* Цвет текста-заполнителя (placeholder) */
+}
+.mail{
+    width: 391px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #25252B; /* Тёмный фон */
+    color: #fff; /* Цвет текста */
+    font-size: 16px;
+    position: absolute; /* Позволяет задавать точные координаты */
+ top: 868px; /* Расстояние от верхней части страницы */
+ left: 40px; /* Расстояние от левого края страницы */
+}
+.mail::placeholder {
+    color: #a9a9a9; /* Цвет текста-заполнителя (placeholder) */
+}
+.topic{
+    width: 391px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #25252B; /* Тёмный фон */
+    color: #fff; /* Цвет текста */
+    font-size: 16px;
+    position: absolute; /* Позволяет задавать точные координаты */
+ top: 925px; /* Расстояние от верхней части страницы */
+ left: 40px; /* Расстояние от левого края страницы */
+}
+.topic::placeholder {
+    color: #a9a9a9; /* Цвет текста-заполнителя (placeholder) */
+}
+.messange {
+    width: 391px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #25252B; /* Тёмный фон */
+    color: #fff; /* Цвет текста */
+
+    font-size: 16px;
+    position: absolute; /* Позволяет задавать точные координаты */
+    top: 980px; /* Расстояние от верхней части страницы */
+    left: 40px; /* Расстояние от левого края страницы */
+
+    resize: none; /* Отключаем возможность изменения размеров поля */
+    line-height: 1.5; /* Межстрочный интервал для удобства чтения */
+}
+
+.messange::placeholder {
+    color: #a9a9a9; /* Цвет текста-заполнителя (placeholder) */
+    vertical-align: top; /* Выровнять placeholder по верхнему краю */
+}
+.contacts{
+  position: absolute;
+  top: 765px;
+  left: 560px;
+}
+.contacts .porshe {
+  width: 580px;
+}
+.button {
+  width: 200px;
+  height: 55px;
+  padding: 10px;
+  border-radius: 10px; /* Скругленные углы */
+  background-color: #25252B; /* Цвет кнопки, близкий к изображению */
+  color: #FFFFFF;
+  font-size: 9px;
+  font-family: 'Roboto', sans-serif; /* Шрифт Roboto */
+  letter-spacing: 0.2em; /* Межбуквенное расстояние (10% вместо 20%) */
+  border: none; /* Убираем стандартные границы */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 1150px;
+  left: 37px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Тень для создания глубины */
+  transition: background-color 0.3s ease; /* Плавный переход при наведении */
+}
+
+.button:hover {
+  background-color: #3E3E46; /* Изменение цвета при наведении */
+}
+
+.button::after {
+  content: '→'; /* Стрелка */
+  font-size: 16px;
+  margin-left: 10px; /* Отступ между текстом и стрелкой */
+}
+.footer {
+    position: fixed;
+    left: -200px;
+    bottom: -1410px;
+    height: 460px;
+    width: 128%;
+    background-color: #25252B;
+    color: white;
+}
+.information {
+  padding-left: 20%; /* Добавляет отступ внутри элемента */
+  margin-top: 65px;
+  font-size: 20px;
+  color: white;
+}
+
+.Main, .Coll, .Cont, .Prof {
+  display: block; /* Делает ссылки блочными */
+  margin-top: 30px;
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 18px; /* Размер текста ссылки */
+  color: #ffffff; /* Цвет текста */
+}
+
+.Main:hover, .Coll:hover, .Cont:hover, .Prof:hover {
+  color: #d4d4d4; /* Цвет ссылки при наведении */
+}
+.Contact{
+  padding-left: 45%; /* Добавляет отступ внутри элемента */
+  margin-top: -254px;
+  font-size: 20px;
+  color: white;
+}
+.Location, .Ph, .Conta{
+  display: block; /* Делает ссылки блочными */
+  margin-top: 30px;
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 18px; /* Размер текста ссылки */
+  color: #ffffff; /* Цвет текста */
+
+}
+.Social{
+  padding-left: 80%; /* Добавляет отступ внутри элемента */
+  margin-top: -245px;
+  font-size: 20px;
+  color: white;
+}
+.Facebook{
+  padding-left: 15%;
+}
+

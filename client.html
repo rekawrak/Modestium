@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Личный кабинет</title>
+        <link rel="stylesheet" href="styles/client.css">
+    </head>
+</html>
+<img src="static/Modestium Motors.png" alt="Image Description" class="photo">
+<div class="header">
+    <h1>Администрирование</h1></div>
+    <div class="FIO">
+        <h1>Панель редактирования информации о пользователях</h1>
+    </div>
+    <button class="back" id="admin">Назад</button>
+
+    <script>
+    document.getElementById("admin").onclick = function() {
+        window.location.href = "admin.html";
+    };
+    </script>
+    <div class="footer">
+        <div class="information">
+            <h4>Информация</h4>
+            <a class="Main" href="sait.html"> Главная </a>
+            <a href="collection.html" class="Coll"> Коллекция </a>
+            <a onclick="scrollToSection();" class="Cont">Контакты</a>
+            <a href="profile.html" class="Prof">Профиль</a>
+        </div>
+        <script>
+            function scrollToSection() {
+                // Замените 'your-page.html#section-id' на URL и ID нужного элемента на другой странице
+                window.location.href = 'sait.html#contactForm';
+            }
+        </script>
+       <div class="Contact">
+        <h4>Контакты</h4>
+        <a class="Location">
+            <p> <img src="static/Vector.png" alt="Иконка карты" width="10" height="=10">
+            Университетский проспект, д. 39,</p> о. Русский, Владивосток, Приморский край, 69009
+        </a>
+        <a class="Ph">
+            <img src="static/Group.png" alt="Иконка телефона" width="10" height="10">
+            8 800 263 94 22
+        </a>
+        <a class="Conta">
+            <img src="static/Group1.png" alt="Иконка email" width="10" height="10">
+            sales@modestium.com
+        </a>
+    </div>
+    <div class="Social">
+        <h4>Мы в соцсетях</h4>
+        <a class="X" href="https://x.com/?mx=2">
+            <img src="static/Shape.png" alt="Иконка карты" width="30" height="23">
+            <a class="Facebook" href="https://ja-jp.facebook.com/login/?next=https%3A%2F%2Fja-j">
+                <img src="static/facebook.png" alt="Иконка карты" width="15" height="25">
+    </div>
+    </div>
+    
+    </body>
+    </html>
+    

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles/main.css">
+<head>
+    <meta charset="utf-8">
+    <title>MM</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+</head>
+<body>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="sait.html">ГЛАВНАЯ</a></li>
+            <li><a href="collection.html">КОЛЛЕКЦИЯ</a></li>
+            <li><a onclick="scrollToSection();">КОНТАКТЫ</a></li>
+            <li>
+                <a href="#" id="profileLink">ЛИЧНЫЙ КАБИНЕТ</a>
+            </li>
+        </ul>
+        <script>
+            function scrollToSection() {
+                window.location.href = 'sait.html#contactForm';
+            }
+        </script>
+        <script>
+            document.getElementById('profileLink').addEventListener('click', function (event) {
+                event.preventDefault(); // Предотвращает переход по ссылке по умолчанию
+        
+                const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+        
+                if (isLoggedIn) {
+                    // Если пользователь вошёл, перенаправляем в личный кабинет
+                    window.location.href = 'profile.html';
+                } else {
+                    // Если пользователь не вошёл, перенаправляем на страницу входа
+                    window.location.href = 'regestration.html';
+                }
+            });
+        </script>
+        
+    </nav>
+    
+    
+
+    <div class="container">
+        <img src="static/big car.png" alt="Image Description" class="image">
+    </div>
+    <div clss="little car">
+    <img src="static/car.png" alt="Image Description" class="photo">
+    <link rel="stylesheet" href="main.css">
+  </div>
+  <div class="header">
+    <h1>MODESTIUM<br>MOTORS</h1>
+    <p class="text">Воплощение вашей<br>мечты об идеальном<br> автомобиле</p>
+    <link rel="stylesheet" href="main.css">
+  </div>
+  <div class="fon">
+      <img src="static/Rectangle 7.png" alt="Image Description">
+      <img src="static/orangecar.png" alt="Image Description" class="cars">
+      <img src="static/whitecar.png" alt="Image Description" class="cars2">
+      <div class="text-us">
+        <h2>О нас</h2>
+        <p>
+            Добро пожаловать в наш премиальный автосалон. Мы предлагаем широкий ассортимент
+            эксклюзивных автомобилей от ведущих производителей, которые отличаются высоким
+            качеством, передовыми технологиями и элегантным дизайном. Наша команда профессионалов
+            гарантирует индивидуальный подход и высококлассное обслуживание на всех этапах
+            покупки. Откройте для себя мир роскоши и престижка — ваш идеальный автомобиль уже ждет вас.
+        </p>
+    </div>
+    <form id="contactForm" action="save-contact.php" method="post">
+    <input class="name" type="text" placeholder="Имя" name="name" pattern="[A-Za-zА-Яа-яЁё\s]+" title="Введите только имя">
+    <div class="con">
+      <p>Связь</p>
+    </div>
+    <form id="contactForm" method="post">
+        <input class="name" type="text" placeholder="Имя" name="name" required>
+        <input class="phone" type="tel" placeholder="Номер телефона" name="phone" required>
+        <input class="mail" type="email" placeholder="E-mail" name="email" required>
+        <input class="topic" type="text" placeholder="Тема" name="topic" required>
+        <textarea class="messange" type="text" placeholder="Сообщение" name="message" required></textarea>
+        <button class="button" type="submit">ОТПРАВИТЬ</button>
+    </form>
+  <div class="contacts">
+    <img src="static/contacts.png" alt="Image Description" class="porshe">
+  </div>
+</form>
+
+<script>
+  emailjs.init('c3knFQqcBeSLeREQe8ubw'); 
+
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Предотвращает стандартное поведение формы
+      
+      emailjs.sendForm('service_m7ice3g', 'template_cx838ka', this)
+          .then(() => {
+              alert('Сообщение отправлено!');
+          }, (error) => {
+              alert('Ошибка отправки: ' + JSON.stringify(error));
+          });
+  });
+</script>
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Останавливаем стандартное поведение формы
+        
+        const formData = new FormData(this); // Собираем данные формы
+
+        // Отправляем данные на сервер через Fetch API
+        fetch('save-contact.php', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json()) // Ожидаем JSON-ответ от сервера
+        .then(data => {
+            if (data.response) {
+                alert(data.response); // Показываем сообщение об успешной отправке
+            } else {
+                alert('Ошибка отправки. Попробуйте ещё раз.');
+            }
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+            alert('Произошла ошибка. Попробуйте позже.');
+        });
+    });
+</script>
+
+  
+   <div class="footer">
+    <div class="information">
+        <h4>Информация</h4>
+        <a href="#" class="Main"> Главная </a>
+        <a href="#" class="Coll"> Коллекция </a>
+        <a onclick="scrollToSection();" class="Cont">Контакты</a>
+        <a href="#" class="Prof">Профиль</a>
+    </div>
+    <script>
+        function scrollToSection() {
+            window.location.href = 'sait.html#contactForm';
+        }
+    </script>
+   <div class="Contact">
+    <h4>Контакты</h4>
+    <a class="Location">
+        <p> <img src="static/Vector.png" alt="Иконка карты" width="10" height="=10">
+        Университетский проспект, д. 39,</p> о. Русский, Владивосток, Приморский край, 69009
+    </a>
+    <a class="Ph">
+        <img src="static/Group.png" alt="Иконка телефона" width="10" height="10">
+        8 800 263 94 22
+    </a>
+    <a class="Conta">
+        <img src="static/Group1.png" alt="Иконка email" width="10" height="10">
+        sales@modestium.com
+    </a>
+</div>
+<div class="Social">
+    <h4>Мы в соцсетях</h4>
+    <a class="X" href="https://x.com/?mx=2">
+        <img src="static/Shape.png" alt="Иконка карты" width="30" height="23">
+        <a class="Facebook" href="https://ja-jp.facebook.com/login/?next=https%3A%2F%2Fja-j">
+            <img src="static/facebook.png" alt="Иконка карты" width="15" height="25">
+</div>
+</div>
+
+</body>
+</html>

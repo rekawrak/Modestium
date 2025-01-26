@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Коллекция</title>
+        <link rel="stylesheet" href="styles/collection.css">
+    </head>
+    <body>
+        <img src="static/Modestium Motors.png" alt="Image Description" class="photo">
+        <nav class="menu">
+            <ul>
+                <li><a href="sait.html">ГЛАВНАЯ</a></li>
+                <li><a href="collection.html">КОЛЛЕКЦИЯ</a></li>
+                <li><a onclick="scrollToSection();">КОНТАКТЫ</a></li>
+                <li>
+                    <a href="regestration.html" id="profileLink">ЛИЧНЫЙ КАБИНЕТ</a>
+                </li>
+            </ul>
+            <script>
+                function scrollToSection() {
+                    // Замените 'your-page.html#section-id' на URL и ID нужного элемента на другой странице
+                    window.location.href = 'sait.html#contactForm';
+                }
+            </script>
+            <section class="collection">
+                <h1>Коллекция</h1>
+                <div class="car-grid">
+                    <a href="mers.html" class="car-item">
+                        <img src="static/gelik 2.png" alt="Mercedes-Benz G-Класс EQ Technology 580">
+                        <h3>Mercedes-Benz G-Класс EQ Technology 580</h3>
+                        <p>36 990 000 ₽</p>
+                    </a>
+                    <a href="lambo.html" class="car-item1">
+                        <img src="static/urusik 1.png" alt="Lamborghini Urus Performante">
+                        <h3>Lamborghini Urus Performante</h3>
+                        <p>55 900 000 ₽</p>
+                    </a>
+                    <a href="porsche.html" class="car-item2">
+                        <img src="static/porsh 1.png" alt="Mercedes-Benz G-Класс EQ Technology 580">
+                        <h3>Porsche 911 Carrera 4 GTS</h3>
+                        <p>34 900 000 ₽</p>
+                    </a>
+                    <a href="ferrari.html" class="car-item3">
+                        <img src="static/ferarereee 1.png" alt="Lamborghini Urus Performante">
+                        <h3>Ferrari Purosangue</h3>
+                        <p>96 900 000 ₽</p>
+                    </a>
+                </div>
+            </section>
+        
+            <div class="footer">
+                <div class="information">
+                    <h4>Информация</h4>
+                    <a href="sait.html" class="Main">Главная</a>
+                    <a href="#" class="Coll">Коллекция</a>
+                    <a onclick="scrollToSection();" class="Cont">Контакты</a>
+                    <a href="#" class="Prof">Профиль</a>
+                </div>
+                <script>
+                    function scrollToSection() {
+                        window.location.href = 'sait.html#contactForm';
+                    }
+                </script>
+                <div class="Contact">
+                    <h4>Контакты</h4>
+                    <div class="Location">
+                        <p>
+                            <img src="static/Vector.png" alt="Иконка карты" width="10" height="10">
+                            Университетский проспект, д. 39, </p>о. Русский, Владивосток, Приморский край, 69009
+                        </p>
+                    </div>
+                    <div class="Ph">
+                        <p>
+                            <img src="static/Group.png" alt="Иконка телефона" width="10" height="10">
+                            8 800 263 94 22
+                        </p>
+                    </div>
+                    <div class="Conta">
+                        <p>
+                            <img src="static/Group1.png" alt="Иконка email" width="10" height="10">
+                            sales@modestium.com
+                        </p>
+                    </div>
+                </div>
+            
+                <div class="Social">
+                    <h4>Мы в соцсетях</h4>
+                    <a class="X" href="https://x.com/?mx=2">
+                        <img src="static/Shape.png" alt="Иконка X" width="30" height="23">
+                    </a>
+                    <a class="Facebook" href="https://ja-jp.facebook.com/login/?next=https%3A%2F%2Fja-j">
+                        <img src="static/facebook.png" alt="Иконка Facebook" width="15" height="25">
+                    </a>
+                </div>
+            </div>
+            
+            </body>
+            </html>
+            
+    </body>

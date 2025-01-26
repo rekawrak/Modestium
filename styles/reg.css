@@ -1,0 +1,169 @@
+body {
+  height:100vh;
+  max-width: 600px; /* Ширина страницы */
+  margin: 0 auto; /* Центрирование по горизонтали */
+  padding: 0 20px; /* Отступы внутри для более аккуратного вида */
+  background: linear-gradient(to bottom, rgb(37,37,37),rgb(38, 40, 74)23%,rgb(55, 26, 26)84%,rgb(32,29,29)100%);
+  font-family: 'Roboto', sans-serif;
+  }
+  html { overflow:  hidden; }
+ div { height:  2000px; }
+  @media (max-width: 768px) {
+      .container {
+          max-width: 90%; /* Уменьшить ширину для маленьких экранов */
+      }
+  }
+      
+  .photo{
+      position: relative;
+      width: 90px;
+      height: auto;
+      top: 50px;
+      left: -300px;
+  }
+  .text{
+      position: relative;
+      font-size: 20px;
+      text-align: center;
+      top: 100px;
+      color: #8E8E8E;
+  }
+  .autor{
+      position: relative;
+      font-size: 20px;
+      text-align: center;
+      top: 90px;
+      color: white;
+  }
+  .name{
+    font-size: 15x;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    top: 105px;
+    width: 300px;
+    height: 25px;
+    padding: 10px 15px;
+    border-radius: 17px;
+    border: none;
+    background-color: #C5C5C5;
+}
+.name::placeholder{
+    color: black;
+}
+  .email{
+      font-size: 15x;
+      position: relative;
+      margin: 0 auto;
+      display: block;
+      top: 115px;
+      width: 300px;
+      height: 25px;
+      padding: 10px 15px;
+      border-radius: 17px;
+      border: none;
+      background-color: #C5C5C5;
+  }
+  .email::placeholder{
+      color: black;
+  }
+  .password{
+      font-size: 15x;
+      position: relative;
+      margin: 0 auto;
+      display: block;
+      top: 125px;
+      width: 300px;
+      height: 25px;
+      padding: 10px 15px;
+      border-radius: 17px;
+      border: none;
+      background-color: #C5C5C5;
+  }
+  .password::placeholder{
+      color: black;
+  }
+  .entry{
+      font-size: 15px;
+      position: relative;
+      margin: 0 auto;
+      display: block;
+      top:150px;
+      width: 180px;
+      height: 35px;
+      padding-left: 10px;
+      border-radius: 17px;
+      border: none;
+      background-color: #8E8E8E;
+      color: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Тень для создания глубины */
+       transition: background-color 0.3s ease; /* Плавный переход при наведении */
+  }
+  .entry:hover{
+      background-color: #3E3E46;
+  }
+  .first{
+      font-size:15px;
+      position: relative;
+      top:163px;
+      left:190px;
+      color:white;
+  }
+  .reg{
+      font-weight:bold;
+      font-size: 15px;
+      position: relative;
+      top: 128px;
+      left: 370px;
+      color: white;
+  }
+  .footer {
+      position: absolute;
+      left: -250px;
+      bottom: -428px;
+      height: 370px;
+      width: 128%;
+      background-color: #25252B;
+      color: white;
+  }
+  .information {
+    padding-left: 20%; /* Добавляет отступ внутри элемента */
+    margin-top: 65px;
+    font-size: 20px;
+    color: white;
+  }
+  
+  .Main, .Coll, .Cont, .Prof {
+    display: block; /* Делает ссылки блочными */
+    margin-top: 30px;
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер текста ссылки */
+    color: #ffffff; /* Цвет текста */
+  }
+  
+  .Main:hover, .Coll:hover, .Cont:hover, .Prof:hover {
+    color: #d4d4d4; /* Цвет ссылки при наведении */
+  }
+  .Contact{
+    padding-left: 45%; /* Добавляет отступ внутри элемента */
+    margin-top: -254px;
+    font-size: 20px;
+    color: white;
+  }
+  .Location, .Ph, .Conta{
+    display: block; /* Делает ссылки блочными */
+    margin-top: 30px;
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 18px; /* Размер текста ссылки */
+    color: #ffffff; /* Цвет текста */
+  
+  }
+  .Social{
+    padding-left: 80%; /* Добавляет отступ внутри элемента */
+    margin-top: -245px;
+    font-size: 20px;
+    color: white;
+  }
+  .Facebook{
+    padding-left: 15%;
+  }
